@@ -1,0 +1,78 @@
+
+ * Tic Tac Toe Pseudocode
+
+ * Start
+
+ * Declare Scanner
+ * Declare player as String
+ * Declare row, col as int
+ * Declare moveCount as int
+ * Declare playAgain as boolean
+
+ * playAgain = true
+
+ * WHILE playAgain is true
+ * {
+ * 	clearBoard()
+
+ * 	player = "X"
+ * 	moveCount = 0
+
+ * 	WHILE game is not over
+ * 	{
+ *     	display()
+
+ *     	OUTPUT "Player " + player + " enter row (1-3): "
+ *     	INPUT row
+ *
+ *     	OUTPUT "Player " + player + " enter column (1-3): "
+ *     	INPUT col
+
+ *     	row = row - 1
+ *     	col = col - 1
+ *
+ *     	WHILE isValidMove(row, col) is false
+ *     	{
+ *         	OUTPUT "Invalid move. Try again."
+ *
+ *         	INPUT row
+ *         	INPUT col
+ *
+ *         	row = row - 1
+ *         	col = col - 1
+ *     	}
+ *
+ *     	board[row][col] = player
+ *
+ *     	moveCount = moveCount + 1
+ *
+ *     	IF moveCount >= 5
+ *     	{
+ *         	IF isWin(player)
+ *         	{
+ *             	display()
+ *             	OUTPUT "Player " + player + " wins!"
+ *             	BREAK
+ *         	}
+ *
+ *         	IF isTie()
+ *         	{
+ *             	display()
+ *             	OUTPUT "It's a tie!"
+ *             	BREAK
+ *         	}
+ *     	}
+ *
+ *     	IF player equals "X"
+ *         	player = "O"
+ *     	ELSE
+ *         	player = "X"
+ * 	}
+ *
+ * 	playAgain = getYNConfirm("Play again?")
+ * }
+ *
+ * OUTPUT "Thanks for playing!"
+
+ * Stop
+*/
